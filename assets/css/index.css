@@ -1,0 +1,313 @@
+.main-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-main {
+    font-size: 7rem;
+    font-weight: 500;
+    font-family: "Kristen ITC";
+    color: var(--color-orange);
+}
+
+.sub-title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-grey);
+    text-align: right;
+}
+
+.main-img img {
+    width: 8rem;
+}
+
+.contest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0 2rem 0;
+}
+
+.contest-items img {
+    width: 20rem;
+}
+
+.contest-items h2 {
+    font-size: 2rem;
+    color: var(--color-orange);
+    margin: 0.5rem 0 2rem 0;
+}
+
+.contest-items p {
+    width: 750px;
+    text-align: justify;
+}
+
+.contest-items .button {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.card-box  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: flex-end;
+}
+
+.card-box .cards {
+    border-radius: 1.5rem;
+    background: var(--color-white);
+    margin-bottom: 3rem;
+    width: 23rem;
+}
+
+.item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--color-orange);
+    border-radius: 25px 25px 0 25px;
+}
+
+.item::before,
+.item::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background: var(--color-orange);
+}
+
+.item::after {
+    border-radius: 0 25px 0 0;
+    background: var(--color-white);
+}
+
+.icon-card, .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+}
+
+.icon-box {
+    position: relative;
+    padding: 1rem;
+}
+
+.icon-card i {
+    position: relative;
+    color: var(--color-white);
+    border: 3px solid var(--color-white);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.content-box {
+    background: var(--color-white);
+}
+
+.content-box h2 {
+    color: var(--color-orange);
+    padding: 1rem;
+}
+
+.content-box p {
+    padding: 0 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.wrapper h3 {
+    margin-bottom: 2rem;
+}
+
+.container-carousel {
+    position: relative;
+    padding: 0 40px 0 40px;
+}
+
+.container-carousel i {
+    position: absolute;
+    top: 38%;
+    font-size: 2.5rem;
+    color: var(--color-orange);
+    cursor: pointer;
+    transform: translateY(-50%);
+    scroll-behavior: smooth;
+}
+
+.container-carousel .dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.container-carousel img {
+    pointer-events: none;
+}
+
+.container-carousel i:nth-child(1){
+    left: 0px;
+}
+
+.container-carousel i:nth-child(3) {
+    right: 0px;
+}
+
+.container-carousel .carousel {
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 0rem;
+    overflow: hidden;
+}
+
+.carousel img {
+    height: 300px;
+    object-fit: cover;
+    margin-left: 12px;
+    width: calc(100%/3);
+    margin-bottom: 1rem;
+}
+
+.carousel img:first-child {
+    margin-left: 0rem;
+}
+
+.container-carousel .button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.container-support {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-support img {
+    width: 29rem;
+    filter: drop-shadow(5px 5px 5px silver);
+}
+
+.support h3 {
+    margin: 2rem 0;
+}
+
+.text-support p {
+    width: 40rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.container-support .button {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1140px) { 
+    .main-container {
+        justify-content: space-between;
+    }
+
+    .title-main {
+        font-size: 6rem;
+    }
+    
+    .sub-title {
+        font-size: 1.4rem;
+    }
+    
+    .main-img img {
+        width: 5.2rem;
+    }
+
+    .contest {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contest-items p {
+        width: 100%;
+    }
+
+    .card-box  {
+        justify-content:space-around;
+    }
+
+    .container-support {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 830px) {
+    .main-container {
+        justify-content: space-between;
+    }
+
+    .title-main {
+        font-size: 4.5rem;
+    }
+    
+    .sub-title {
+        font-size: 1.3rem;
+    }
+    
+    .main-img img {
+        width: 4.5rem;
+    }
+
+    .contest-items {
+        margin: 0 0 2rem 0;
+    }
+
+
+    .carousel img {
+        width: calc(100%/2);
+    }
+    
+    .text-support p {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding-bottom: 550px;
+    }
+
+    .main-container {
+        justify-content:flex-start;
+    }
+
+    .title-main {
+        font-size: 3rem;
+    }
+    
+    .sub-title {
+        font-size: 1rem;
+    }
+    
+    .main-img img {
+        display: none;
+    }
+
+    .carousel img {
+        width: calc(100%);
+    }
+
+    .img-support img {
+        width: 20rem;
+    }
+}
